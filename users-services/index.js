@@ -41,4 +41,4 @@ repository
     app.on("close", () => {
       repository.disconnect();
     });
-  });
+  }, 10000);

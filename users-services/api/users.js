@@ -7,10 +7,10 @@
 //  Only export - adds the API to the app with the given options.
 module.exports = (app, options) => {
   app.get("/users", (req, res, next) => {
-    console.log("every thing fine");
     options.repository
       .getUsers()
       .then((users) => {
+        console.log(users);
         res.status(200).send(
           users.map((user) => {
             return {
